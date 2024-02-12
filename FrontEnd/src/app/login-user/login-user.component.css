@@ -1,0 +1,60 @@
+.login-toolbar{
+    background-color: #8F00FF;
+    color: aliceblue;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: x-large;
+    border-top-left-radius: 48px;
+    border-top-right-radius: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+mat-card{
+    max-width: 400px;
+    align-items: center;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: #00c8ff;
+    margin-left: 37%;
+    margin-top: 7%;
+}
+
+
+
+mat-card-content{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input{
+    width: 5cm;
+    height: 1cm;
+}
+button{
+    width: 2.5cm;
+    height: 1cm;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.title-center {
+    flex: 1 1 auto;
+   
+    margin-left: auto;
+    margin-right: -70%;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(17, 37, 186);
+    font-family:'Times New Roman', Times, serif;
+  }
+
+  .example-full-width{
+    height:50px;
+    width:250px;
+   
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .gradient-custom {
+    background-image: linear-gradient(to right , #a1e6df, #a0eddb);
+  }

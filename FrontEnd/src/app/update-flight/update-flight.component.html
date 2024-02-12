@@ -1,0 +1,97 @@
+
+<div class="row" style="height:80px">
+    <nav class="navbar  .ms-auto justify-content-center" style="background-color: rgb(153, 215, 217);">
+      <a class="navbar-brand"><b>Airline Management System</b></a>
+      
+      </nav>
+  </div>
+    <div class="row">
+      <div class="col-2" style="background-color: rgb(153, 215, 217); height: 640px;">
+        <h3>Menu</h3>
+    <a routerLink="/create-flight" ><div class="view">Add Flight</div></a><br>
+    <a routerLink="/update-flight" ><div class="view">Update Flight</div></a><br>
+    <a routerLink="/flight-list" ><div class="view">View All Flights</div></a><br>
+   
+   
+  
+  </div>
+      <div class="col">
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand mb-0 h1">Update a Flight</a>
+    <button  class="btn btn-info" style="margin-left: 990px"><a routerLink="/admin-home">Home</a></button>
+  </nav><br>
+<div class="container">
+    <div class="row" [hidden]="submitted" style="width: 400px; margin-left: auto; margin-right: auto;">
+        
+            <div class="form-bg">
+                <form #regForm='ngForm' align-center id="myForm">
+                    
+                    <div class="form-group">
+      <label for="name">Flight Number</label>
+      <input type="text" class="form-control" id="flightNo" required [(ngModel)]="flight.flightNo" name="flightNo">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Flight Name</label>
+        <input type="text" class="form-control" id="flightName" required [(ngModel)]="flight.flightName" name="flightName">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Seat Capacity</label>
+        <input type="text" class="form-control" id="seatCapacity" required [(ngModel)]="flight.seatCapacity" name="seatCapacity">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Departure</label>
+        <input type="text" class="form-control" id="departure" required [(ngModel)]="flight.departure" name="departure">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Arrival</label>
+        <input type="text" class="form-control" id="arrival" required [(ngModel)]="flight.arrival" name="arrival">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Duration</label>
+        <input type="text" class="form-control" id="duration" required [(ngModel)]="flight.duration" name="duration">
+      </div>
+                    <!-- <div class="form-group">
+                        <input type="text" class="form-control"
+                        placeholder="Flight No: xxxx" required ngModel>
+                    </div> <br>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control"
+                        placeholder="Flight Name: xxxx" required ngModel>
+                    </div><br> -->
+                   
+                    <!-- <div class="form-group">
+                        <input type="text" class="form-control"
+                        placeholder="Seat Capacity: xxxx" required ngModel>
+                    </div><br> -->
+
+                    <!-- <div class="form-group">
+                        <input type="text" class="form-control"
+                        placeholder="Departure: xxxx" required ngModel>
+                    </div><br> -->
+
+                    <!-- <div class="form-group">
+                        <input type="text" class="form-control"
+                        placeholder="Arrival: xxxx" required ngModel>
+                    </div><br> -->
+
+                    <!-- <div class="form-group">
+                        <input type="text" class="form-control"
+                        placeholder="Duration: xxxx" required ngModel>
+                    </div><br> -->
+
+                    <div class="align-center">
+                        <button type="submit" class="btn btn-success" [disabled]="!regForm.valid">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+

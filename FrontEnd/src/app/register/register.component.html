@@ -1,0 +1,109 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><b>Registration Form</b></h3>
+            <form [formGroup]="myForm" id="myForm" name="myForm">
+
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="number" id="userId" class="form-control form-control-lg" formControlName="userId" />
+                    <label class="form-label" for="userId">User Id</label>
+                    <div *ngIf="myForm.get('userId')!.touched && myForm.get('userId')!.invalid">
+                      <div *ngIf="myForm.get('userId')!.hasError('required')">
+                          <font color="red"><b>User ID is Required.</b></font>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="userName" class="form-control form-control-lg" formControlName="userName" />
+                    <label class="form-label" for="userName">User Name</label>
+                    <div *ngIf="myForm.get('userName')!.touched && myForm.get('userName')!.invalid">
+                      <div *ngIf="myForm.get('userName')!.hasError('required')">
+                          <font color="red"><b>User Name is Required.</b></font>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              
+                
+
+
+                
+              <div class="row">
+                <div class="col-md-6 mb-4 ">
+                  <div class="form-outline">
+                    <input type="password" id="userPassword" class="form-control form-control-lg"
+                      formControlName="userPassword" />
+                    <label class="form-label" for="userPassword">Password</label>
+                    <div *ngIf="myForm.get('userPassword')!.touched && myForm.get('userPassword')!.invalid">
+                      <div *ngIf="myForm.get('userPassword')!.hasError('required')">
+                          <font color="red"><b>User Password is Required.</b></font>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              
+
+              
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <input type="text" id="userPhoneno" class="form-control form-control-lg" formControlName="userPhoneno" />
+                    <label class="form-label" for="userPhoneno">Phone Number</label>
+                    <div *ngIf="myForm.get('userPhoneno')!.touched && myForm.get('userPhoneno')!.invalid">
+                      <div *ngIf="myForm.get('userPhoneno')!.hasError('required')">
+                          <font color="red"><b>User Phoneno is Required.</b></font>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                </div>
+              
+
+                <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="email" id="userEmail" class="form-control form-control-lg"
+                      formControlName="userEmail" />
+                    <label class="form-label" for="userEmail">Email</label>
+                    <div *ngIf="myForm.get('userEmail')!.touched && myForm.get('userEmail')!.invalid">
+                      <div *ngIf="myForm.get('userEmail')!.hasError('required')">
+                          <font color="red"><b>User Email is Required.</b></font>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              
+              <div class="row">
+                <div class="col-12">
+                  <select class="select form-control-lg" formControlName="userType" id="userType">
+                    <option value="1">Choose option</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                  </select>
+                  <label class="form-label select-label">Choose option</label>
+                </div>
+              </div>
+              </div>
+            </form>
+            <div class="mt-4 pt-2">
+              <input class="btn btn-primary btn-lg" type="submit" value="Submit"  id="register" (click)="registerUser(myForm.value)" />
+            </div>
+
+            {{result}}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

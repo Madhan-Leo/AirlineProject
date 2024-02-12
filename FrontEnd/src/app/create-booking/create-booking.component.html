@@ -1,0 +1,63 @@
+<div class="row" style="height:80px">
+  <nav class="navbar  .ms-auto justify-content-center" style="background-color: rgb(153, 215, 217);">
+    <a class="navbar-brand"><b>Airline Management System</b></a>
+    </nav>
+</div>
+  <div class="row">
+    <div class="col-2" style="background-color: rgb(153, 215, 217); height: 640px;">
+      <h3>Menu</h3>
+     
+  <a routerLink="/create-booking" ><div class="view" >Add Booking</div></a><br>
+  <a routerLink="/update-booking" ><div class="view">Update Booking</div></a><br>
+  <a routerLink="/booking-list" ><div class="view">View Booking</div></a><br>
+ 
+ 
+
+</div>
+    <div class="col">
+      <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand mb-0 h1">Add Booking</a>
+        <button  class="btn btn-info" style="margin-left: 500px"><a routerLink="/user-home">Home</a></button>
+      </nav><br>
+    
+    <div [hidden]="submitted" style="width: 400px; margin-left: auto; margin-right: auto;">
+      <form (ngSubmit)="onSubmit()" id ="myForm">
+        <div class="form-group">
+          <label for="name">Booking ID</label>
+          <input type="text" class="form-control" id="bookingId" required [(ngModel)]="booking.bookingId" name="bookingId">
+        </div>
+        <br>
+    
+        <div class="form-group">
+        <label for="name">User ID</label>
+        <input type="text" class="form-control" id="userId" required [(ngModel)]="booking.userId" name="userId">
+    </div><br>
+    
+        <div class="form-group">
+          <label for="name">Flight No</label>
+          <input type="text" class="form-control" id="flightNo" required [(ngModel)]="booking.flightNo" name="flightNo">
+        </div><br>
+    
+        <div class="form-group">
+          <label for="name">Travelling Date</label>
+          <input type="date" class="form-control" id="travellingDate" required [(ngModel)]="booking.travellingDate" name="travellingDate">
+        </div><br>
+    
+        <div class="form-group">
+            <label for="name">No of Tickets</label>
+            <input type="text" class="form-control" id="noOfTickets" required [(ngModel)]="booking.noOfTickets" name="noOfTickets">
+          </div><br>
+    
+        <button type="submit" class="btn btn-success" name="booknow">Submit</button>
+      </form>
+    </div></div>
+  </div>
+  
+      
+      
+   
+
+
+
+
+

@@ -1,0 +1,55 @@
+<div class="row" style="height:80px">
+  <nav class="navbar  .ms-auto justify-content-center" style="background-color: rgb(153, 215, 217);">
+    <a class="navbar-brand"><b>Airline Management System</b></a>
+    </nav>
+</div>
+  <div class="row">
+    <div class="col-2" style="background-color: rgb(153, 215, 217); height: 640px;">
+      <h3>Menu</h3>
+     
+  <a routerLink="/create-booking" ><div class="view">Add Booking</div></a><br>
+  <a routerLink="/update-booking" ><div class="view">Update Booking</div></a><br>
+  <a routerLink="/booking-list" ><div class="view">View Booking</div></a><br>
+ 
+ 
+
+</div>
+    <div class="col">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand mb-0 h1">Booking List</a>
+        <button  class="btn btn-info" style="margin-left: 500px"><a routerLink="/user-home">Home</a></button>
+      </nav><br>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Booking ID</th>
+            <th>User ID</th>
+            <th>Flight No</th>
+            <th>Travelling Date</th>
+            <th>No of Tickets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings | async">
+            <td>{{booking.bookingId}}</td>
+            <td>{{booking.userId}}</td>
+            <td>{{booking.flightNo}}</td>
+            <td>{{booking.travellingDate}}</td>
+            <td>{{booking.noOfTickets}}</td>
+            <td>
+              <button (click)="deleteBooking(booking.bookingId)" class="btn btn-danger">Delete</button>
+              <button  class="btn btn-info" style="margin-left: 10px"><a routerLink="/update-booking">Update</a></button>
+             
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  </div>
